@@ -50,6 +50,9 @@ lieux_t ville4 = {"Bann", "C'est la plus grande cite de Sealed D., son marche, s
 lieux_t ville5 = {"Katri", "Assez grand village se trouvant a la bordure des terres sauvages, ou les immondes creatures y sont massivement presentes", 6, 4};
 lieux_t ville6 = {"Zela", "Premiere ville en dehors des frontieres securise de Sealed D., c'est malheureusement dans ses alentours que bon nombre d'aventuriers viennent y laisser leur vie", 9, 5};
 lieux_t ville7 = {"Ragt", "Peu de personnes peuvent se venter de revenir vivant de Ragt, les monstres y sont feroces et il residerait dans ses lieux un demon aux capacites pouvant faire trembler n'importe quel heros", 12, 6};
+// Ville 1 relié -> 2 et 4 ;;; Ville 2 relié -> 1 et 4 ;;; Ville 3 relié -> 7 ;;;
+// Ville 4 relié -> 1, 2 et 5 ;;; Ville 5 relié -> 4 et 6 ;;; Ville 6 relié -> 5 et 7 ;;; Ville 7 relié -> 6 et 3
+
 
 // NOM DU MONDE
   printf("\n%s\n", "                            _____________________________________________________________ ");
@@ -129,7 +132,7 @@ SetColor (8);
   } else if (strcmp(ville4.nom, coffre) == 0 && stamina >= ville4.difficulte) {
     printf("\nVous avez decider de vous rendre a %s\n", ville4.nom);
     Sleep(2000);
-  } 
+  }
 SetColor (15);
 }
 
