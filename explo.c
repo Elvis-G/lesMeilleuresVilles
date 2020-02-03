@@ -19,3 +19,55 @@ void SetColor(int ForgC) {
  }
  return;
 }
+
+typedef struct Lieux lieux_t;
+struct Lieux
+{
+};
+
+// started from the bottom now we here #coffre
+char coffre[15];
+char ville1[15] = "Jogo";
+char ville2[15] = "Vinel";
+
+int main (){
+
+
+  printf("\n%s\n", "                            _____________________________________________________________ ");
+  printf("%s\n", "                           |                                                             |");
+  printf("%s\n", "                           |                         CHOIX DES VILLES                    |");
+  printf("%s\n\n", "                           |_____________________________________________________________|");
+
+
+/* printf("\n%s\n", "Un panneau indiquant deux noms de villes est en face, de vous, l'un indiquant Jogo, l'autre Vinel");
+printf("\n%s\n", "Dans quel lieu souhaitez-vous aller : [0] pour Jogo ; [1] pour Vinel");
+printf("Votre choix : ");
+SetColor (3);
+scanf("%d", &coffre);
+SetColor (15);
+
+if (coffre == 0) {
+  printf("\n%s\n", "Vous avez decider de vous rendre a Jogo");
+  Sleep(2000);
+} else if (coffre == 1) {
+printf("\n%s\n", "Vous avez decider de vous rendre a Vinel");
+Sleep(2000);
+} */
+
+printf("\n%s\n", "Un panneau indiquant deux noms de villes est en face, de vous, l'un indiquant Jogo, l'autre Vinel");
+printf("\n%s\n", "Dans quel lieu souhaitez-vous aller : [Jogo] ; [Vinel]");
+printf("Votre choix : ");
+SetColor (3);
+scanf("%s", &coffre);
+SetColor (15);
+
+if (strcmp(ville1, coffre) == 0) {
+  printf("\nVous avez decider de vous rendre a Jogo\n");
+  Sleep(2000);
+} else if (strcmp(ville2, coffre) == 0) {
+printf("\nVous avez decider de vous rendre a Vinel\n");
+Sleep(2000);
+}
+
+return 0;
+}
