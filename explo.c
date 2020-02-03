@@ -19,3 +19,41 @@ void SetColor(int ForgC) {
  }
  return;
 }
+
+typedef struct LeHeros LeHeros_t;
+struct LeHeros
+{
+
+};
+
+// started from the bottom now we here #coffre
+int coffre;
+
+int main (){
+
+
+  printf("\n%s\n", "                            _____________________________________________________________ ");
+  printf("%s\n", "                           |                                                             |");
+  printf("%s\n", "                           |                         CHOIX DES VILLES                    |");
+  printf("%s\n\n", "                           |_____________________________________________________________|");
+
+
+printf("\n%s\n", "Un panneau indiquant deux noms de villes est en face, de vous, l'un indiquant Jogo, l'autre Vinel");
+printf("\n%s\n", "Dans quel lieu souhaitez-vous aller : [0] pour Jogo ; [1] pour Vinel");
+printf("Votre choix : ");
+SetColor (3);
+scanf("%d", &coffre);
+SetColor (15);
+
+if (coffre == 0) {
+  printf("\n%s\n", "Vous avez decider de vous rendre a Jogo");
+  Sleep(2000);
+} else if (coffre == 1) {
+printf("\n%s\n", "Vous avez decider de vous rendre a Vinel");
+Sleep(2000);
+}
+
+
+
+return 0;
+}
